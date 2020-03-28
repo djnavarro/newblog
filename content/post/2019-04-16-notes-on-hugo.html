@@ -1,0 +1,27 @@
+---
+title: "Tutorial part 6: Some notes on Hugo"
+author: "Danielle Navarro"
+date: "2019-04-16"
+slug: notes-on-hugo
+tags: ["slum", "blogdown", "hugo"]
+summary: "Eventually, this will be an explanation of how the Hugo slum theme is designed, possibly accompanied by a brief tutorial on Hugo."
+header:
+  caption: "A blank ggplot"
+  image: 'header/theme_dark.png'
+---
+
+
+
+<p><strong>TODO</strong>. Talk about the templating system. Why is this page in “projects” and everything else is in “posts”. It’s actually super customisable, you can just create your own folders!</p>
+<ul>
+<li><code>_default/single.html</code>: the specific posts and project pages (in content)</li>
+<li><code>_default/lists.html</code> : the “listing pages” for posts and projects (auto)</li>
+<li><code>_default/terms.html</code> : the “listing page” for tags (auto)</li>
+<li><code>_default/home.html</code> : the home page (corresponding to _index.html)</li>
+</ul>
+<p>The exception is:</p>
+<ul>
+<li><code>generic_page/single.html</code> : used in the about.html page (note the YAML)</li>
+</ul>
+<p>Each of these uses various “partial” templates to avoid code reuse.</p>
+<p>If you ever want to customise layouts, you can use the layouts folder rather than try to edit the themes folder.</p>
